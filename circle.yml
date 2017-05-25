@@ -7,7 +7,17 @@
 #    - mkdir -p $CIRCLE_TEST_REPORTS/phpunit
 #    - phpunit Test.php
 
+machine:
+    timezone: Asia/Tokyo
+    
 test:
   override:
-    - echo Hello World
-    
+    - phpunit Test.php
+
+deployment:
+  deploy:
+    branch: master
+    commands:
+      - make build
+      - make deploy
+      
