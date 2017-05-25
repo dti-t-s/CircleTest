@@ -1,8 +1,13 @@
-machine:
-  php:
-    version: 5.4.5
+#machine:
+#  php:
+#    version: 5.4.5
+#
+#test:
+#  override:
+#    - mkdir -p $CIRCLE_TEST_REPORTS/phpunit
+#    - phpunit Test.php
 
 test:
   override:
-    - mkdir -p $CIRCLE_TEST_REPORTS/phpunit
-    - phpunit Test.php
+    - echo Hello World
+    
