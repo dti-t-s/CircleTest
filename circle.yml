@@ -7,9 +7,16 @@
 #    - mkdir -p $CIRCLE_TEST_REPORTS/phpunit
 #    - phpunit Test.php
 
+#machine:
+#  php:
+#    version: 7.1
+#    timezone: Asia/Tokyo
+
 machine:
+  pre:
+    - sudo apt-get update; USE_PRECOMPILE=true sudo -E circleci-install php 7.1.0
   php:
-    version: 7.1
+    version: 7.1.0
     timezone: Asia/Tokyo
     
 test:
