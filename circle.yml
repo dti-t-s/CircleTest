@@ -13,10 +13,10 @@
 #    timezone: Asia/Tokyo
 
 machine:
-  pre:
-    - sudo apt-get update; USE_PRECOMPILE=true sudo -E circleci-install php 7.1.0
+#  pre:
+#    - sudo apt-get update; USE_PRECOMPILE=true sudo -E circleci-install php 7.1.0
   php:
-    version: 7.1.0
+    version: 5.5
     timezone: Asia/Tokyo
     
 test:
